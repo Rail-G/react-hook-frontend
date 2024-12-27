@@ -10,7 +10,7 @@ export function Body () {
     const setNewsList = contextNews!.setNewsList
     useEffect(() => {
         const newsReguest = async () => {
-            await getRequestWithToken('http://localhost:7070/private/news', token).then(
+            await getRequestWithToken(import.meta.env.VITE_PRIVATE_NEWS_URL, token).then(
                 (resolve) => {
                     setNewsList(resolve)
                 }

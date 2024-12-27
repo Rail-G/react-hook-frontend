@@ -6,7 +6,7 @@ export function FormAuth({setProfile, setNewsList}: FormType) {
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => setValue((prev) => ({...prev, [e.target.name]: e.target.value}))
     const onSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        const token = await postRequest('http://localhost:7070/auth', value).then(
+        const token = await postRequest(import.meta.env.VITE_AUTH, value).then(
             (resolve) => {
                 localStorage.setItem('token', resolve.token)
                 return resolve.token
@@ -16,7 +16,7 @@ export function FormAuth({setProfile, setNewsList}: FormType) {
             }
         )
         if (typeof token == 'string') {
-            await getRequestWithToken('http://localhost:7070/private/me', token).then(
+            await getRequestWithToken(import.meta.env.VITE_PRIVATE_PROFILE_URL, token).then(
                 (resolve) => {
                     localStorage.setItem('profile', JSON.stringify(resolve))
                     setProfile(JSON.stringify(resolve))
@@ -25,7 +25,7 @@ export function FormAuth({setProfile, setNewsList}: FormType) {
                     console.error('Error', reject)
                 }
             )
-            await getRequestWithToken('http://localhost:7070/private/news', token).then(
+            await getRequestWithToken(import.meta.env.VITE_PRIVATE_NEWS_URL, token).then(
                 (resolve) => {
                     setNewsList(resolve)
                 }
