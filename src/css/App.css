@@ -1,0 +1,310 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 13px;
+}
+
+.profile-block {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 5px;
+}
+
+.profile-list ul {
+  list-style-type: none;
+}
+
+.profile-list ul li {
+  border: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  border-radius: 5px;
+}
+
+.profile-list ul li a {
+  text-decoration: none;
+  color: black
+}
+
+.active {
+  background: rgb(75, 75, 221);
+}
+
+.active a {
+  color: white !important
+}
+
+.profile-info ul li:last-child {
+  margin-bottom: 0;
+}
+
+.profile-detail {
+  width: 250px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.profile-detail img {
+  width: 100%;
+  height: 250px;
+  border-radius: 5px 5px 0 0;
+}
+
+.profile-info {
+  padding: 5px;
+}
+
+.profile-info h3 {
+  font-size: 1.4rem;
+}
+
+.details {
+  list-style-type: none;
+  font-size: 1.1rem;
+}
+
+.profile-load {
+  min-height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
+.error-block {
+  min-height: 300px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(229, 95, 95, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 2rem
+}
+
+.error-text {
+  color: white;
+  text-align: center;
+}
+
+.error-btn {
+  border: 1px solid black;
+  background-color: antiquewhite;
+  padding: 15px;
+}
+
+.test-page {
+  width: 1000px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.test-page button {
+  padding: 10px;
+  font-size: 1.5rem
+}
+
+.page {
+  width: 300px;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 50px 20px 20px;
+  position: relative;
+}
+
+.page-data {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.ok {
+  background-color: rgba(3, 253, 82, 0.5);
+}
+
+.error {
+  background-color: rgba(253, 3, 3, 0.5);
+}
+
+.load {
+  background-color: rgba(253, 236, 3, 0.5);
+}
+
+.header {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(213, 213, 213);
+  display: flex;
+  align-items: center;
+}
+
+.head-title {
+  width: 50%;
+  font-size: 2rem;
+}
+
+.auth-form {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.auth-form input {
+  width: 40%;
+  padding: 5px 5px 5px 10px;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  outline: none;
+  border-color: gray;
+}
+
+.header-button {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.auth {
+  border-color: rgb(6, 232, 59);
+  color: rgb(6, 232, 59);
+}
+
+.logout {
+  border-color: rgb(218, 46, 46);
+  color: rgb(218, 46, 46);
+}
+
+.logout:hover {
+  background-color: rgb(218, 46, 46);
+  color: white;
+}
+
+.auth:hover {
+  color: white;
+  background-color: rgb(6, 232, 59);
+}
+
+.body {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.default-page {
+  width: 90%;
+  background-color: aliceblue;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.default-page h3 {
+  font-size: 3rem;
+}
+
+.default-page p {
+  font-size: 2rem;
+}
+
+.news-list {
+  width: 90%;
+}
+
+.news-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5%;
+  list-style-type: none;
+  height: 200px;
+}
+
+.news-list ul li {
+  width: 30%;
+}
+
+.news {
+  width: 100%;
+}
+
+.news img {
+  width: 100%;
+  height: 100px;
+  background-color: gray;
+}
+
+.news-body {
+  width: 100%;
+  padding: 10px;
+}
+
+.news-body h3 {
+  font-size: 1.5rem;
+}
+
+.news-body p {
+  font-size: 1.2rem;
+}
+
+.profile {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.profile h3 {
+  font-size: 1.6rem;
+  align-self: center;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.task {
+  margin-bottom: 50px;
+}
