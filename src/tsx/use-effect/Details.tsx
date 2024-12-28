@@ -10,7 +10,7 @@ export function Details({id}: {id: number}) {
         <>
             {loading && <div className="profile-load">Loading...</div>}
             {!error && <div className="profile-detail">
-                <img src={data && data.avatar ? data.avatar : ''}  alt="" />
+                <img src={data?.avatar ? `${data.avatar}?t=${Math.random()}` : ''}  alt="" />
                 <div className="profile-info">
                     <h3>{data?.name}</h3>
                     <ul className="details">
